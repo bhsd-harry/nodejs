@@ -19,20 +19,20 @@
 		"lint": "npm run lint:ts"
 	},
 	"devDependencies": {
-		"@bhsd/code-standard": "^1.0.1",
+		"@bhsd/code-standard": "^1.2.0",
 		"@stylistic/eslint-plugin": "^3.1.0",
-		"@types/node": "^24.0.10",
-		"@typescript-eslint/eslint-plugin": "^8.35.1",
-		"@typescript-eslint/parser": "^8.35.1",
+		"@types/node": "^24.9.2",
+		"@typescript-eslint/eslint-plugin": "^8.46.2",
+		"@typescript-eslint/parser": "^8.46.2",
 		"eslint": "^8.57.1",
 		"eslint-plugin-eslint-comments": "^3.2.0",
-		"eslint-plugin-jsdoc": "^52.0.2",
+		"eslint-plugin-jsdoc": "^61.1.11",
 		"eslint-plugin-json-es": "^1.6.0",
-		"eslint-plugin-n": "^17.20.0",
+		"eslint-plugin-n": "^17.23.1",
 		"eslint-plugin-promise": "^7.2.1",
-		"eslint-plugin-regexp": "^2.9.0",
+		"eslint-plugin-regexp": "^2.10.0",
 		"eslint-plugin-unicorn": "^56.0.1",
-		"typescript": "^5.8.2"
+		"typescript": "^5.9.3"
 	},
 	"engines": {
 		"node": ">=18.17.0"
