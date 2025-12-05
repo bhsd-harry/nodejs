@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import {Session} from 'inspector/promises'; // eslint-disable-line n/no-unsupported-features/node-builtins
+import {Session} from 'inspector/promises';
 import type {Profiler} from 'inspector';
 
 declare interface ProfileNode extends Pick<Profiler.ProfileNode, 'callFrame' | 'hitCount'> {
@@ -26,7 +26,7 @@ export const profile = async (callback: () => void | Promise<void>, dir: string)
 	await session.post('Profiler.enable');
 	await session.post('Profiler.start');
 	await callback();
-	const {profile: {nodes}} = await session.post('Profiler.stop');
+	const {nodes} = (await session.post('Profiler.stop')).profile;
 	const useful = nodes.filter(
 			({callFrame: {url}, hitCount, children}) => url.startsWith('file:///')
 				&& (hitCount || children),
