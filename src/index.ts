@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import {Session} from 'inspector/promises';
+import util from 'util';
 import type {Profiler} from 'inspector';
 
 declare interface ProfileNode extends Pick<Profiler.ProfileNode, 'callFrame' | 'hitCount'> {
@@ -20,6 +21,11 @@ const addTicks = (myTicks: Record<number, number>, positionTicks?: Profiler.Posi
 	}
 };
 
+/**
+ * 进行性能分析，生成prof.json和prof-summary.json文件
+ * @param callback 要分析的函数
+ * @param dir 输出文件夹路径
+ */
 export const profile = async (callback: () => void | Promise<void>, dir: string): Promise<void> => {
 	const session = new Session();
 	session.connect();
@@ -65,3 +71,31 @@ export const refreshStdout = (str: string): void => {
 	process.stdout.clearLine(0);
 	process.stdout.write(`\x1B[?7l${str}\x1B[?7h\r`);
 };
+
+/**
+ * 将字符串以绿色显示
+ * @param str 要显示的字符串
+ */
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+export const green = (str: string): string => util.styleText?.('green', str) ?? str;
+
+/**
+ * 将字符串以黄色显示
+ * @param str 要显示的字符串
+ */
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+export const yellow = (str: string): string => util.styleText?.('yellow', str) ?? str;
+
+/**
+ * 将字符串以红色显示
+ * @param str 要显示的字符串
+ */
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+export const red = (str: string): string => util.styleText?.('red', str) ?? str;
+
+/**
+ * 将字符串以蓝色显示
+ * @param str 要显示的字符串
+ */
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+export const blue = (str: string): string => util.styleText?.('blue', str) ?? str;

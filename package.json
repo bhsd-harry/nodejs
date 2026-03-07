@@ -1,6 +1,6 @@
 {
 	"name": "@bhsd/nodejs",
-	"version": "0.1.1",
+	"version": "0.2.0",
 	"homepage": "https://github.com/bhsd-harry/nodejs#readme",
 	"bugs": {
 		"url": "https://github.com/bhsd-harry/nodejs/issues"
@@ -19,18 +19,18 @@
 		"lint": "npm run lint:ts"
 	},
 	"devDependencies": {
-		"@bhsd/code-standard": "^2.1.0",
-		"@stylistic/eslint-plugin": "^5.9.0",
+		"@bhsd/code-standard": "^2.1.1",
+		"@stylistic/eslint-plugin": "^5.10.0",
 		"@types/node": "^24.11.0",
-		"@typescript-eslint/eslint-plugin": "^8.54.0",
-		"@typescript-eslint/parser": "^8.54.0",
-		"eslint": "^9.39.3",
+		"@typescript-eslint/eslint-plugin": "^8.57.0",
+		"@typescript-eslint/parser": "^8.57.0",
+		"eslint": "^9.39.4",
 		"eslint-plugin-eslint-comments": "^3.2.0",
 		"eslint-plugin-jsdoc": "^62.7.1",
 		"eslint-plugin-jsonc": "^3.1.1",
 		"eslint-plugin-n": "^17.24.0",
 		"eslint-plugin-promise": "^7.2.1",
-		"eslint-plugin-regexp": "^3.0.0",
+		"eslint-plugin-regexp": "^3.1.0",
 		"eslint-plugin-unicorn": "^63.0.0",
 		"typescript": "^5.9.3"
 	},
