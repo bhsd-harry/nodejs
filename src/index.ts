@@ -1,7 +1,7 @@
-import fs from 'fs';
-import path from 'path';
+import * as fs from 'fs';
+import * as path from 'path';
 import {Session} from 'inspector/promises';
-import util from 'util';
+import {styleText} from 'util';
 import type {Profiler} from 'inspector';
 
 declare interface ProfileNode extends Pick<Profiler.ProfileNode, 'callFrame' | 'hitCount'> {
@@ -76,26 +76,22 @@ export const refreshStdout = (str: string): void => {
  * 将字符串以绿色显示
  * @param str 要显示的字符串
  */
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-export const green = (str: string): string => util.styleText?.('green', str) ?? str;
+export const green = (str: string): string => styleText('green', str);
 
 /**
  * 将字符串以黄色显示
  * @param str 要显示的字符串
  */
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-export const yellow = (str: string): string => util.styleText?.('yellow', str) ?? str;
+export const yellow = (str: string): string => styleText('yellow', str);
 
 /**
  * 将字符串以红色显示
  * @param str 要显示的字符串
  */
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-export const red = (str: string): string => util.styleText?.('red', str) ?? str;
+export const red = (str: string): string => styleText('red', str);
 
 /**
  * 将字符串以蓝色显示
  * @param str 要显示的字符串
  */
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-export const blue = (str: string): string => util.styleText?.('blue', str) ?? str;
+export const blue = (str: string): string => styleText('blue', str);

@@ -1,6 +1,6 @@
 {
 	"name": "@bhsd/nodejs",
-	"version": "0.2.0",
+	"version": "1.0.0",
 	"homepage": "https://github.com/bhsd-harry/nodejs#readme",
 	"bugs": {
 		"url": "https://github.com/bhsd-harry/nodejs/issues"
@@ -12,6 +12,7 @@
 	],
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
+	"type": "module",
 	"scripts": {
 		"prepublishOnly": "npm run build",
 		"build": "tsc",
@@ -35,6 +36,6 @@
 		"typescript": "^5.9.3"
 	},
 	"engines": {
-		"node": ">=20.19.0"
+		"node": "^20.19.0 || ^22.13.0 || >=24.11.0"
 	}
 }
