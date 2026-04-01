@@ -3,9 +3,13 @@
 		"src/*.ts"
 	],
 	"compilerOptions": {
+		"types": [
+			"node"
+		],
 		"target": "ES2024",
 		"module": "es6",
 		"declaration": true,
+		"rootDir": "src",
 		"outDir": "dist",
 		"alwaysStrict": true,
 		"exactOptionalPropertyTypes": true,
