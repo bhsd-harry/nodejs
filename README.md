@@ -1,4 +1,4 @@
 # @bhsd/nodejs
 
 [![npm version](https://badge.fury.io/js/@bhsd%2Fnodejs.svg)](https://www.npmjs.com/package/@bhsd/nodejs)
-[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
+[![CodeQL](https://github.com/bhsd-harry/nodejs/actions/workflows/codeql.yml/badge.svg)](https://github.com/bhsd-harry/nodejs/actions/workflows/codeql.yml)
