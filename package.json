@@ -21,8 +21,8 @@
 		"lint": "npm run lint:ts"
 	},
 	"devDependencies": {
-		"@bhsd/code-standard": "^3.0.0",
-		"eslint": "^10.5.0",
+		"@bhsd/code-standard": "^3.1.0",
+		"eslint": "^10.6.0",
 		"typescript": "^6.0.3"
 	},
 	"engines": {
