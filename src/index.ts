@@ -97,3 +97,9 @@ export const red = (str: string): string => styleText('red', str);
  * @param str 要显示的字符串
  */
 export const blue = (str: string): string => styleText('blue', str);
+
+/**
+ * 将字符串以灰色显示
+ * @param str 要显示的字符串
+ */
+export const gray = (str: string): string => styleText('gray', str);
