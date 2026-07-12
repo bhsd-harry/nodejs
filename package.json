@@ -1,6 +1,6 @@
 {
 	"name": "@bhsd/nodejs",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"homepage": "https://github.com/bhsd-harry/nodejs#readme",
 	"bugs": {
 		"url": "https://github.com/bhsd-harry/nodejs/issues"
@@ -22,7 +22,7 @@
 	},
 	"devDependencies": {
 		"@bhsd/code-standard": "^3.1.0",
-		"eslint": "^10.6.0",
+		"eslint": "^10.7.0",
 		"typescript": "^6.0.3"
 	},
 	"engines": {

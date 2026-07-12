@@ -1,8 +1,13 @@
 import * as assert from 'assert';
+import * as path from 'path';
 
 export class ReplacableString {
+	declare scope: string;
+
 	/** @param input 要替换的字符串 */
-	constructor(public input: string) {}
+	constructor(public input: string, scope: string) {
+		this.scope = path.relative(process.cwd(), scope);
+	}
 
 	/**
 	 * 替换并确认
@@ -17,7 +22,7 @@ export class ReplacableString {
 		}
 		const {input} = this;
 		this.input = input.replace(searchValue, replaceValue);
-		assert.notStrictEqual(this.input, input, `replace failed: ${searchValue}`);
+		assert.notStrictEqual(this.input, input, `replace failed: ${searchValue}; scope: ${this.scope}`);
 		return this;
 	}
 
@@ -30,7 +35,7 @@ export class ReplacableString {
 	 */
 	replaceAll(searchValue: string | RegExp, replaceValue: string, count: number): this {
 		const {input} = this,
-			msg = `replaceAll failed: ${searchValue}`;
+			msg = `replaceAll failed: ${searchValue}; scope: ${this.scope}`;
 		if (typeof searchValue === 'string') {
 			assert.strictEqual(input.split(searchValue).length - 1, count, msg);
 		} else if (searchValue.global) {
