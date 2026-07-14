@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-unsafe-string-replacement */
 import * as assert from 'assert';
 import * as path from 'path';
 
