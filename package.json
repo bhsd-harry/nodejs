@@ -14,7 +14,7 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"scripts": {
-		"ls": "npm i --package-lock-only && npm ls --package-lock-only --all --omit=dev",
+		"ls": "npm i --package-lock-only && npm ls --package-lock-only -a --omit=dev",
 		"prepublishOnly": "npm run build",
 		"build": "tsc",
 		"lint:ts": "tsc --noEmit && eslint --cache .",
@@ -22,8 +22,8 @@
 		"test": "echo 'This package has no tests.'"
 	},
 	"devDependencies": {
-		"@bhsd/code-standard": "^4.3.0",
-		"eslint": "^10.12.0",
+		"@bhsd/code-standard": "^5.0.0",
+		"eslint": "^10.13.0",
 		"typescript": "^6.0.3"
 	},
 	"engines": {
