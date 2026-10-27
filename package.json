@@ -14,19 +14,21 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"scripts": {
-		"ls": "npm i --package-lock-only && npm ls --package-lock-only -a --omit=dev",
 		"prepublishOnly": "npm run build",
 		"build": "tsc",
-		"lint:ts": "tsc --noEmit && eslint --cache .",
+		"lint:ts": "tsc --noEmit && oxlint && eslint --cache .",
 		"lint": "npm run lint:ts",
+		"migrate": "oxlint-migrate",
 		"test": "echo 'This package has no tests.'"
 	},
 	"devDependencies": {
-		"@bhsd/code-standard": "^5.0.0",
-		"eslint": "^10.13.0",
+		"@bhsd/code-standard": "^5.1.0",
+		"@oxlint/migrate": "^1.89.0",
+		"eslint": "^10.14.0",
+		"oxlint": "^1.89.0",
 		"typescript": "^6.0.3"
 	},
 	"engines": {
-		"node": "^20.19.0 || ^22.13.0 || >=24.11.0"
+		"node": "^22.13.0 || >=24.11.0"
 	}
 }
